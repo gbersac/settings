@@ -84,3 +84,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Plugin priority
 let g:signify_sign_overwrite = 1
+
+" tagbar plugin options
+nmap <F8> :TagbarToggle<CR>

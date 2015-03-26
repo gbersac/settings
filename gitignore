@@ -1,0 +1,24 @@
+# Compiled source files
+*.a
+*.o
+*.so
+a.out
+*.class
+*.com
+*.pyc
+ 
+# Backup files
+\#*#
+*~
+.*.swp
+*.tmp
+*.old
+  
+# OS-generated crap
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
