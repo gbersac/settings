@@ -6,8 +6,8 @@ setopt autocd
 export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/.brew/bin:$PATH"
 export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/.brew/include:$PATH"
 export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/progs:$PATH"
-export PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rustc-all/bin:$PATH"
-export DYLD_LIBRARY_PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rustc-all/lib:$DYLD_LIBRARY_PATH"
+export PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rust-all/bin:$PATH"
+export DYLD_LIBRARY_PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rust-all/lib:$DYLD_LIBRARY_PATH"
 export DYLD_LIBRARY_PATH="/nfs/zfs-student-2/users/2013/gbersac/.brew/lib:$DYLD_LIBRARY_PATH"
 
 alias la="ls -Ga "
