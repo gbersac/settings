@@ -1,0 +1,13 @@
+[user]
+	name = Guillaume Bersac
+	email = bersac_1@hotmail.fr
+
+[core]
+	editor = vim
+
+[color]
+	ui = auto
+
+[github]
+	user = gbersac
+
