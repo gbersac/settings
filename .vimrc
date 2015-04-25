@@ -37,6 +37,8 @@ Bundle "aperezdc/vim-template"
 
 " rust support
 Bundle "wting/rust.vim"
+Bundle 'fatih/vim-go'
+Bundle 'cespare/vim-toml'
 
 "end of vbundle
 call vundle#end()            " required
@@ -68,6 +70,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp plugin
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -82,8 +85,14 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " tcomment plugin
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Miscelaneous
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Plugin priority
 let g:signify_sign_overwrite = 1
 
 " tagbar plugin options
 nmap <F8> :TagbarToggle<CR>
+
+
