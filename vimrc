@@ -35,7 +35,10 @@ Bundle 'plasticboy/vim-markdown'
 " c/c++ header easy
 Bundle "aperezdc/vim-template"
 
-" rust support
+"multi cursor
+Bundle "terryma/vim-multiple-cursors"
+
+" language support
 Bundle "wting/rust.vim"
 Bundle 'fatih/vim-go'
 Bundle 'cespare/vim-toml'
