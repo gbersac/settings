@@ -111,3 +111,15 @@ let g:tagbar_type_rust = {
     \]
     \}
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic
+" c
+let g:syntastic_c_compiler_options	= " -Wall -Wextra -Werror "
+let g:syntastic_c_compiler			= "clang"
+let g:syntastic_c_include_dirs		= ["inc", '../inc']
+
+" c++
+let g:syntastic_cpp_compiler			= "clang"
+let g:syntastic_cpp_compiler_options	= " -Wall -Wextra -Werror "
+let g:syntastic_cpp_include_dirs		= ["inc", '../inc']
+
