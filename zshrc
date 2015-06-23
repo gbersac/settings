@@ -19,7 +19,12 @@ MAIL="$USER@student.42.fr"
 export MAIL
 
 #personal zshrc
-export PS1="%~ %# "
+function prompt_char {
+    git branch >/dev/null 2>/dev/null && echo '±' && return
+	hg root >/dev/null 2>/dev/null && echo '☿' && return
+	echo '○'
+}
+export PS1=$'\e[34m%~ %#\e[0m '
 export EDITOR='subl -w'
 export HIST_IGNORE_ALL_DUPS
 setopt autocd
