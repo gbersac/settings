@@ -33,9 +33,13 @@ export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/.brew/bin:$PATH"
 export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/.brew/include:$PATH"
 export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/progs:$PATH"
 export PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rust-all/bin:$PATH"
-export DYLD_LIBRARY_PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rust-all/lib:$DYLD_LIBRARY_PATH"
-export DYLD_LIBRARY_PATH="/nfs/zfs-student-2/users/2013/gbersac/.brew/lib:$DYLD_LIBRARY_PATH"
+export PATH="/nfs/zfs-student-3/users/2013/gbersac/.brew/lib:$PATH"
+export DYLD_LIBRARY_PATH="/nfs/zfs-student-3/users/2013/gbersac/.brew/lib:$DYLD_LIBRARY_PATH"
 export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
+
+# for 42cv project
+export CV_DIR="/nfs/zfs-student-3/users/2013/gbersac/project/42cv_repo"
+export CV_PATH="/nfs/zfs-student-3/users/2013/gbersac/project/42cv_repo"
 
 alias la="ls -Ga "
 alias lla="ls -Gla "

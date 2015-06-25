@@ -1,3 +1,5 @@
+set autoread
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin vbundle
 set nocompatible              " be iMproved, required
