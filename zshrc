@@ -15,26 +15,22 @@ USER=`/usr/bin/whoami`
 export USER
 GROUP=`/usr/bin/id -gn $user`
 export GROUP
-MAIL="$USER@student.42.fr"
+MAIL="bersac_1@hotmail.fr"
 export MAIL
 
 #personal zshrc
-function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '±' && return
-	hg root >/dev/null 2>/dev/null && echo '☿' && return
-	echo '○'
-}
-export PS1=$'\e[34m%~ %#\e[0m '
-export EDITOR='subl -w'
+autoload -U colors && colors
+PS1="%{$fg[cyan]%}%~ %#%{$reset_color%} "
+# export PS1='%~ %# '
+export EDITOR='vim'
 export HIST_IGNORE_ALL_DUPS
 setopt autocd
 
-export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/.brew/bin:$PATH"
-export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/.brew/include:$PATH"
-export PATH="/Volumes/Data/nfs/zfs-student-2/users/2013/gbersac/progs:$PATH"
-export PATH="/nfs/zfs-student-2/users/2013/gbersac/progs/rust-all/bin:$PATH"
-export PATH="/nfs/zfs-student-3/users/2013/gbersac/.brew/lib:$PATH"
-export DYLD_LIBRARY_PATH="/nfs/zfs-student-3/users/2013/gbersac/.brew/lib:$DYLD_LIBRARY_PATH"
+export PATH="~/.brew/bin:$PATH"
+export PATH="~/.brew/include:$PATH"
+export PATH="~/progs:$PATH"
+export PATH="~/.brew/lib:$PATH"
+export DYLD_LIBRARY_PATH="~/.brew/lib:$DYLD_LIBRARY_PATH"
 export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
 
 # for 42cv project
