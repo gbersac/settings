@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 filepath=`pwd`
 
@@ -18,16 +18,24 @@ rm ~/.ctags
 ln -s $filepath/ctags ~/.ctags
 vim +PluginInstall +qall now
 
-#zsh
-rm ~/.zshrc
-ln -s $filepath/zshrc ~/.zshrc
+#shell configuration
+if [[ "$os_type" == "macos" ]]; then
+	rm ~/.zshrc
+	ln -s $filepath/zshrc ~/.zshrc
+elif [[ "$os_type" == "linux" ]]; then
+	rm ~/.bashrc
+	ln -s $filepath/bashrc ~/.bashrc
+fi
+rm ~/.alias.sh
+ln -s $filepath/alias.sh ~/.alias.sh
+chmod 700 ~/.alias.sh
 
 #git
 rm ~/.gitignore_global
 ln -s $filepath/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 rm ~/gitconfig
-ln -s $filepath/gitconfig ~/.gitconfig
+ln -s $filepath/gitconfig ~/gitconfig
 
 #homebrew
 if [[ "$os_type" == "macos" ]]; then

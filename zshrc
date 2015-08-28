@@ -37,17 +37,7 @@ export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
 export CV_DIR="/nfs/zfs-student-3/users/2013/gbersac/project/42cv_repo"
 export CV_PATH="/nfs/zfs-student-3/users/2013/gbersac/project/42cv_repo"
 
-alias la="ls -Ga "
-alias lla="ls -Gla "
-alias l="ls -Ga "
-alias ls="ls -G "
-alias ll="ls -Gl "
-
-alias gits="git status "
-alias vi="vim"
-alias gita="git add -A"
-alias gitc="git commit -m "
-alias gitac="git add -A; git commit -m "
+#alias
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "
-alias class="python ~/progs/cpp_class_generator/main.py "
 alias nasm+="~/.brew/bin/nasm -f macho64"
+source ~/alias.sh
