@@ -11,3 +11,4 @@ alias gitac="git add -A; git commit -m "
 alias gitki="git stash --keep-index --include-untracked"
 
 alias vi="vim"
+alias grep='grep --color=auto --exclude-dir=\.git'

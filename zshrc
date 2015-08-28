@@ -37,6 +37,8 @@ export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
 export CV_DIR="/nfs/zfs-student-3/users/2013/gbersac/project/42cv_repo"
 export CV_PATH="/nfs/zfs-student-3/users/2013/gbersac/project/42cv_repo"
 
+export EDITOR=vim
+
 #alias
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "
 alias nasm+="~/.brew/bin/nasm -f macho64"
