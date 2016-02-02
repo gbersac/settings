@@ -40,4 +40,5 @@ ln -s $filepath/gitconfig ~/gitconfig
 #homebrew
 if [[ "$os_type" == "macos" ]]; then
 	mkdir ~/.homebrew && curl -L https://github.com/Homebrew/homebrew/tarball/master | tar xz --strip 1 -C ~/.homebrew
+	brew install vim
 fi

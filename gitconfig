@@ -1,5 +1,5 @@
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /nfs/zfs-student-3/users/gbersac/.gitignore_global
 [user]
 	name = Guillaume Bersac
 	email = bersac_1@hotmail.fr

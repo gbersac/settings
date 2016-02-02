@@ -1,3 +1,4 @@
+
 set autoread
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,9 +26,13 @@ Bundle 'tComment'
 "Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
 Bundle 'majutsushi/tagbar'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Bundle 'Auto-Pairs'
 
 " misc plugins
 Bundle 'bling/vim-airline'
+Bundle 'AutoComplPop'
 "Bundle 'vim-scripts/hexman.vim'
 
 " filetype plugins
@@ -54,6 +59,9 @@ filetype plugin indent on    " required
 syn on
 set nu
 set mouse=a
+set cursorline
+set backspace=2
+set paste
 
 " Associate file extension with synthax
 au BufNewFile,BufRead *.s setlocal ft=nasm
@@ -63,6 +71,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set noet ci pi sts=0 sw=4 ts=4
+
+autocmd BufWritePre * :%s/\s\+$//e " trim trailing whitespace on save
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic settings
@@ -89,7 +99,13 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" tcomment plugin
+" Ultisnip Plugin
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin priority
