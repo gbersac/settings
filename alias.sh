@@ -1,8 +1,8 @@
-alias la="ls -Ga "
-alias lla="ls -Gla "
-alias l="ls -Ga "
-alias ls="ls -G "
-alias ll="ls -Gl "
+alias la='ls -a --color=auto '
+alias lla='ls -la --color=auto '
+alias l='ls -a --color=auto '
+alias ls='ls --color=auto '
+alias ll='ls -l --color=auto '
 
 alias gits="git status "
 alias gita="git add -A"
