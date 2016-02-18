@@ -42,5 +42,10 @@ export EDITOR=vim
 #alias
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "
 alias nasm+="~/.brew/bin/nasm -f macho64"
-alias vim="~/.brew/bin/vim"
 source ~/.alias.sh
+
+alias la='ls -aG '
+alias lla='ls -laG '
+alias l='ls -aG '
+alias ls='ls -G '
+alias ll='ls -lG '

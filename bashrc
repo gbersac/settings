@@ -85,9 +85,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias la='ls -a --color=auto '
+alias lla='ls -la --color=auto '
+alias l='ls -a --color=auto '
+alias ls='ls --color=auto '
+alias ll='ls -l --color=auto '
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -117,3 +119,4 @@ fi
 export EDITOR=vim
 PS1="\[\033[4m\]\[\033[34m\]\w \$\[\033[0m\] "
 source ~/.alias.sh
+
