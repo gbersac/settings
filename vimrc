@@ -38,6 +38,7 @@ Bundle 'AutoComplPop'
 " filetype plugins
 Bundle 'nginx.vim'
 Bundle 'plasticboy/vim-markdown'
+Plugin 'derekwyatt/vim-scala'
 
 " c/c++ header easy
 Bundle "aperezdc/vim-template"
