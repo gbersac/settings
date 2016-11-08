@@ -1,9 +1,29 @@
-#default 42.zshrc
-PATH=$HOME/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
+plugins=(git)
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+#export ZSH_THEME="robbyrussell"
+export ZSH_THEME="agnoster"
+
+source $ZSH/oh-my-zsh.sh
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# History
 HISTFILE=~/.zshrc_history
 SAVEHIST=5000
 HISTSIZE=5000
-
+export HIST_IGNORE_ALL_DUPS
 setopt inc_append_history
 setopt share_history
 
@@ -18,18 +38,14 @@ export GROUP
 MAIL="bersac_1@hotmail.fr"
 export MAIL
 
-#personal zshrc
-autoload -U colors && colors
-PS1="%{$fg[cyan]%}%~ %#%{$reset_color%} "
-# export PS1='%~ %# '
-export EDITOR='vim'
-export HIST_IGNORE_ALL_DUPS
+# to have the ability to change directory without typing `cd`
 setopt autocd
 
-export EDITOR=vim
-
 # prompt
-PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+# setopt prompt_subst
+# PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info) '
+PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
 
 # brew (for mac only)
 export PATH="~/.brew/bin:$PATH"
@@ -38,3 +54,6 @@ export PATH="~/.brew/lib:$PATH"
 export DYLD_LIBRARY_PATH="~/.brew/lib:$DYLD_LIBRARY_PATH"
 export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
 
+source ~/.alias.sh
+
+source /home/gbersac/settings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

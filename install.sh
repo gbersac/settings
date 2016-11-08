@@ -20,9 +20,12 @@ vim +PluginInstall +qall now
 
 # shell configuration
 if [[ "$os_type" == "linux" ]]; then
-	# install oh my zsh
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sudo apt install -y zsh
+	chsh -s `which zsh`
 fi
+# install oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 rm ~/.zshrc
 ln -s $filepath/zshrc ~/.zshrc
 rm ~/.alias.sh
@@ -31,10 +34,10 @@ chmod 755 ~/.alias.sh
 
 # platform specific script
 if [[ "$os_type" == "macos" ]]; then
-	macos.sh
+	$filepath/macos.sh
 fi
 if [[ "$os_type" == "linux" ]]; then
-	linux.sh
+	$filepath/linux.sh
 fi
 
 # git
