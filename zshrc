@@ -7,6 +7,8 @@ plugins=(git)
 #export ZSH_THEME="robbyrussell"
 export ZSH_THEME="agnoster"
 
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
@@ -44,8 +46,7 @@ setopt autocd
 # prompt
 # setopt prompt_subst
 # PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info) '
-PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-
+PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info) '
 
 # brew (for mac only)
 export PATH="~/.brew/bin:$PATH"
