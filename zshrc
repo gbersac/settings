@@ -4,8 +4,7 @@ plugins=(git)
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#export ZSH_THEME="robbyrussell"
-export ZSH_THEME="agnoster"
+export ZSH_THEME="robbyrussell"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -45,7 +44,6 @@ setopt autocd
 
 # prompt
 # setopt prompt_subst
-# PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info) '
 PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info) '
 
 # brew (for mac only)
@@ -57,4 +55,4 @@ export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
 
 source ~/.alias.sh
 
-source /home/gbersac/settings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/settings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
