@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-sudo apt-get install -y tig
-
-# last version of git
-sudo apt-add-repository ppa:git-core/ppa
-sudo apt-get update
-sudo apt-get install git
-=======
 # last version of git
 sudo apt-add-repository ppa:git-core/ppa
 sudo apt-get update
@@ -25,4 +17,3 @@ sudo curl -L -o /usr/local/bin/amm https://git.io/vXVf5 && sudo chmod +x /usr/lo
 sudo apt-get install -y vim
 sudo apt-get install -y tig
 
->>>>>>> Stashed changes

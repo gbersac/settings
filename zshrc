@@ -44,7 +44,7 @@ setopt autocd
 
 # prompt
 # setopt prompt_subst
-PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info) '
+PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
 # brew (for mac only)
 export PATH="~/.brew/bin:$PATH"

@@ -45,4 +45,5 @@ rm ~/.gitignore_global
 ln -s $filepath/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 rm ~/gitconfig
-ln -s $filepath/gitconfig ~/gitconfig
+ln -s $filepath/gitconfig ~/.gitconfig
+
