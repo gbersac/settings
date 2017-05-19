@@ -11,11 +11,7 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -46,13 +42,8 @@ setopt autocd
 # setopt prompt_subst
 PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
-# brew (for mac only)
-export PATH="~/.brew/bin:$PATH"
-export PATH="~/.brew/include:$PATH"
-export PATH="~/.brew/lib:$PATH"
-export DYLD_LIBRARY_PATH="~/.brew/lib:$DYLD_LIBRARY_PATH"
-export HOMEBREW_CACHE="~/.homebrew/Library/Formula"
-
 source ~/.alias.sh
-
+. /Users/gbe/.nix-profile/etc/profile.d/nix.sh
 source $HOME/settings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH="$HOME/.yarn/bin:$PATH"

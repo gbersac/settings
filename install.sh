@@ -24,7 +24,8 @@ if [[ "$os_type" == "linux" ]]; then
 	chsh -s `which zsh`
 fi
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 rm ~/.zshrc
 ln -s $filepath/zshrc ~/.zshrc
@@ -45,5 +46,5 @@ rm ~/.gitignore_global
 ln -s $filepath/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 rm ~/gitconfig
-ln -s $filepath/gitconfig ~/.gitconfig
+cp $filepath/gitconfig ~/.gitconfig
 
