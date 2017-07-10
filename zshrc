@@ -39,8 +39,47 @@ export MAIL
 setopt autocd
 
 # prompt
-# setopt prompt_subst
-PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+function prompt_git_branch() {
+	echo `git status 2> /dev/null | grep "On branch" | cut -c 11-`
+}
+
+function prompt_git_has_changes() {
+	if [[ `git status --porcelain 2> /dev/null | grep -v 'fatal: Not a git repository'` ]]; then
+	  echo 1
+	else
+	  echo 0
+	fi
+}
+
+function prompt_git_has_changes_str() {
+	if [[ $(prompt_git_has_changes) == 1 ]]; then
+	  echo "∆"
+	else
+	  echo ""
+	fi
+}
+
+function prompt_get_pwd() {
+  echo "${PWD/$HOME/~}"
+}
+
+function prompt_put_spacing() {
+	# calculate blanck space
+	local pwd_length=`prompt_get_pwd | wc -m | tr -d ' '`
+	# echo pwd_length $pwd_length
+	local branch_length=`prompt_git_branch | wc -m | tr -d ' '`
+	# echo branch_length $branch_length
+	local termwidth=`expr $COLUMNS - $pwd_length - $branch_length - 25 - $(prompt_git_has_changes)`
+	# echo $termwidth
+	local spacing=""
+	for i in {1..$termwidth}; do
+		spacing="${spacing} "
+	done
+	echo $spacing
+}
+
+PROMPT='$BG[236]%(?:%{$fg_bold[green]%}● :%{$fg_bold[red]%}● ) $FG[003]%D{%a %d/%m/%Y %H:%M} %{$fg[cyan]%}$(prompt_get_pwd) $(prompt_put_spacing) $FG[010]$(prompt_git_has_changes_str) $FG[001]$(prompt_git_branch)
+$BG[236]$FG[005]➤  $reset_color'
 
 source ~/.alias.sh
 . /Users/gbe/.nix-profile/etc/profile.d/nix.sh
