@@ -78,6 +78,7 @@ function prompt_put_spacing() {
 	echo $spacing
 }
 
+echo $(prompt_git_branch)
 PROMPT='$BG[236]%(?:%{$fg_bold[green]%}● :%{$fg_bold[red]%}● ) $FG[003]%D{%a %d/%m/%Y %H:%M} %{$fg[cyan]%}$(prompt_get_pwd) $(prompt_put_spacing) $FG[010]$(prompt_git_has_changes_str) $FG[001]$(prompt_git_branch)
 $BG[236]$FG[005]➤  $reset_color'
 
@@ -86,3 +87,15 @@ source ~/.alias.sh
 source $HOME/settings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+mktouch() {
+    if [ $# -lt 1 ]; then
+        echo "Missing argument";
+        return 1;
+    fi
+
+    for f in "$@"; do
+        mkdir -p -- "$(dirname -- "$f")"
+        touch -- "$f"
+    done
+}
