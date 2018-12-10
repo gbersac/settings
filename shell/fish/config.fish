@@ -6,4 +6,4 @@ set MAIL "bersac_1@hotmail.fr"
 export MAIL
 
 source ~/.config/fish/alias.fish
-source ~/.local.fish
+source ~/.config/fish/local.fish

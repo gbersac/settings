@@ -52,22 +52,18 @@ elif [[ "$selected_shell" == "fish" ]]; then
 	fi
 	curl -L https://get.oh-my.fish | fish
 
-	mkdir ~/.config
-	mkdir ~/.config/fish
-	mkdir ~/.config/fish/functions
-	rm ~/.config/fish/config.fish
-	ln -s $filepath/fish/config.fish ~/.config/fish/config.fish
-	rm ~/.config/fish/alias.fish
-	ln -s $filepath/fish/alias.fish ~/.config/fish/alias.fish
-	for f in $filepath/fish/functions/*; do
-		rm ~/.config/fish/functions/$f
-		ln -s $filepath/fish/functions/$f ~/.config/fish/functions/$f
-	done
+	fishConfigPath="$filepath/shell/fish"
+	rm ~/.config/fish/config.fish 2> /dev/null
+	ln -s $fishConfigPath/config.fish ~/.config/fish/config.fish
+	rm ~/.config/fish/alias.fish 2> /dev/null
+	ln -s $fishConfigPath/alias.fish ~/.config/fish/alias.fish
+	ls ~/.config/fish/functions 2> /dev/null || ln -s $fishConfigPath/functions ~/.config/fish
+	touch ~/.config/fish/local.fish
 fi
 
 ### git
-rm ~/.gitignore_global
+rm ~/.gitignore_global 2> /dev/null
 ln -s $filepath/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
-rm ~/gitconfig
+rm ~/gitconfig 2> /dev/null
 cp $filepath/gitconfig ~/.gitconfig
