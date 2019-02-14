@@ -1,1 +1,0 @@
-/Users/gbe/.config/fish/alias.fish
