@@ -1,6 +1,9 @@
 # homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew tap caskroom/cask
+brew tap caskroom/versions
+
 brew install vim
 brew cask install sublime-text
 brew cask install iterm2
