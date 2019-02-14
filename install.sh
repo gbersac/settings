@@ -50,7 +50,7 @@ elif [[ "$selected_shell" == "fish" ]]; then
 	elif [[ "$os_type" == "macos" ]]; then
 		brew install fish
 	fi
-	curl -L https://get.oh-my.fish | fish
+	curl -L https://get.oh-my.fish
 
 	fishConfigPath="$filepath/shell/fish"
 	rm ~/.config/fish/config.fish 2> /dev/null
