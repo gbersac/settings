@@ -11,7 +11,7 @@ end
 
 # Reset last commit if it is a work in progress
 function gitrwip
-	set lastCommitMessage (git log --oneline -n1 | string sub --start 9)
+	set lastCommitMessage (git log --oneline -n1 | string sub --start 11)
 	if [ "$lastCommitMessage" = wip ]
 		git reset HEAD~1;
 	else
