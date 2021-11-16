@@ -1,5 +1,7 @@
 # homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/guillaumebersac/.profile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew tap caskroom/cask
 brew tap caskroom/versions
